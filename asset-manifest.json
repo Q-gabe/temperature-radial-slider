@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/temperature-radial-slider/static/css/main.eaece945.chunk.css",
+    "main.js": "/temperature-radial-slider/static/js/main.457e3050.chunk.js",
+    "main.js.map": "/temperature-radial-slider/static/js/main.457e3050.chunk.js.map",
+    "runtime-main.js": "/temperature-radial-slider/static/js/runtime-main.07339ccb.js",
+    "runtime-main.js.map": "/temperature-radial-slider/static/js/runtime-main.07339ccb.js.map",
+    "static/js/2.994f96df.chunk.js": "/temperature-radial-slider/static/js/2.994f96df.chunk.js",
+    "static/js/2.994f96df.chunk.js.map": "/temperature-radial-slider/static/js/2.994f96df.chunk.js.map",
+    "index.html": "/temperature-radial-slider/index.html",
+    "precache-manifest.93d133fd7dd7fe926ab0eb904f6af43e.js": "/temperature-radial-slider/precache-manifest.93d133fd7dd7fe926ab0eb904f6af43e.js",
+    "service-worker.js": "/temperature-radial-slider/service-worker.js",
+    "static/css/main.eaece945.chunk.css.map": "/temperature-radial-slider/static/css/main.eaece945.chunk.css.map",
+    "static/js/2.994f96df.chunk.js.LICENSE.txt": "/temperature-radial-slider/static/js/2.994f96df.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/temperature-radial-slider/static/media/WorkSans-SemiBold.6ae86405.ttf",
+    "static/media/ColdFace.470e931a.svg": "/temperature-radial-slider/static/media/ColdFace.470e931a.svg",
+    "static/media/HotFace.1bc2d9ab.svg": "/temperature-radial-slider/static/media/HotFace.1bc2d9ab.svg",
+    "static/media/InnerFace.51cde146.svg": "/temperature-radial-slider/static/media/InnerFace.51cde146.svg",
+    "static/media/Spoke.b4a6d684.svg": "/temperature-radial-slider/static/media/Spoke.b4a6d684.svg",
+    "static/media/SunIcon.70f4b6a2.svg": "/temperature-radial-slider/static/media/SunIcon.70f4b6a2.svg",
+    "static/media/ThermostatBG.21c3caeb.svg": "/temperature-radial-slider/static/media/ThermostatBG.21c3caeb.svg",
+    "static/media/Thumb.56c5294d.svg": "/temperature-radial-slider/static/media/Thumb.56c5294d.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.07339ccb.js",
+    "static/js/2.994f96df.chunk.js",
+    "static/css/main.eaece945.chunk.css",
+    "static/js/main.457e3050.chunk.js"
+  ]
+}
