@@ -1,0 +1,19 @@
+.RadSliderTrack {
+    position: relative;
+    width: 510px;
+    height: 510px;
+    z-index: 5;
+}
+
+.Spoke {
+    width: auto;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+    height: auto;
+    position: absolute;
+}
+
+.Spokes {
+    position: absolute;
+    top: 50.5%;
+    left: 50%;
+    transform: rotate(-30deg);
+}

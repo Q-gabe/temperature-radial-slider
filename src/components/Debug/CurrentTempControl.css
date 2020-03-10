@@ -1,0 +1,17 @@
+.CurrentTempControl {
+    display: block;
+    background-color: #ffffff;
+    height: 35px;
+    width: 450px;
+    border-radius: 5px;
+    margin: auto;
+    padding: 15px 0px 0px 0px;
+    overflow-y: overflow;
+}
+
+/* Makes the arrows in the current temp text box always visible
+ * (Idea: https://stackoverflow.com/questions/24286506/number-input-always-show-spin-buttons)
+ */
+input[type=number]::-webkit-inner-spin-button {  
+    opacity: 1
+}

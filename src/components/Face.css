@@ -1,0 +1,16 @@
+.Face, .BGFace, .ColdFace, .HotFace {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* (Inspiration for animation: https://stackoverflow.com/questions/8449933/animation-css3-display-opacity) */
+.ColdFace {
+    opacity: 1;
+    transition: opacity 0.4s ease-in-out
+}
+
+.HotFace {
+    opacity: 1;
+    transition: opacity 0.4s ease-in-out
+}

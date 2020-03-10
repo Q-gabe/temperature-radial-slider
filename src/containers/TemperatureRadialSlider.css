@@ -1,0 +1,12 @@
+.TemperatureRadialSlider {
+    width: 510px;
+    height: 510px;
+    position: relative;
+    margin: 25px auto 30px auto;
+}
+
+.SunIcon {
+    position: absolute;
+    top: 74%;
+    left: 44.5%;
+}

@@ -1,0 +1,23 @@
+.TemperatureGauges {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    width: 510px;
+    z-index: 2;
+}
+
+.SetTempGauge {
+    font-family: "WorkSans-SemiBold", Arial, Helvetica, sans-serif;
+    font-size: 135px;
+    height: 140px;
+    color: white;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.CurrTempGauge {
+    font-family: "Carlito-Bold", Arial, Helvetica, sans-serif;
+    font-size: 48px;
+    color: white;
+}

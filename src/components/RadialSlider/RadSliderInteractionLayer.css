@@ -1,0 +1,8 @@
+.RadSliderInteractionLayer {
+    position: absolute;
+    top: 0;
+    width: 440px;
+    height: 440px;
+    margin: 35px;
+    z-index: 6;
+}
