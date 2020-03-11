@@ -1,68 +1,85 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center"> temperature-radial-slider</h1>
+<p align="center">
+	<a href = "https://reactjs.org"><img src="https://img.shields.io/badge/Made with-React-23425C?logo=react"></a>
+	<a href = ""><img src="https://img.shields.io/badge/Powered by-Caffeine-blue?logo=Buy-Me-A-Coffee"></a>
+	<a href = "https://github.com/Q-gabe/temperature-radial-slider/blob/master/LICENSE"><img src="https://img.shields.io/badge/License-MIT-informational"></a>
+</p>
 
-## Available Scripts
+A fully customised Radial Slider built in ReactJS simulating a thermostat, leveraging skeuomorphic and intuitive design. This project was built as part of an assignment for the NUS CS3249 UI Development module. The React App has been bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  
 
-In the project directory, you can run:
+## Preview :sparkles:
 
-### `npm start`
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Q-gabe/temperature-radial-slider/master/preview/animatedPreview1.gif" width="300" hspace="4">
+  <img src="https://raw.githubusercontent.com/Q-gabe/temperature-radial-slider/master/preview/animatedPreview2.gif" width="300" hspace="4">
+ </p>
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<h3 align="center"><a href="https://q-gabe.me/temperature-radial-slider/">See the live interactive demo here!</a></h3>
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Implementation Details :thinking:
 
-### `npm test`
+In this implementation, the **current temperature** (environment) and **target temperature** (intended) can be set, with the former being set via a debugging slider on the bottom of the widget. Depending on the difference between the current temperature and target temperature, the **thermostat will indicate that it needs to either heat or cool the environment**. This is indicated by the color change of the face of the thermostat. 
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+However, as there is no simulation on the actual cooling or warming, the state of the thermostat will continue indefinitely until the difference between both temperatures are small enough for thermostat to transit back into its idle state.
 
-### `npm run build`
+## Getting started :space_invader:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+If you are new to React, make sure you have **Node v10.16.0** or later installed on your system.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+To deploy this application locally, clone this repository onto your computer. Then, navigate to the folder where you cloned the repository. 
+```
+# Navigate to cloned repository
+cd temperature-radial-slider
+# Install all dependencies
+npm install
+# Run the local development build
+npm start
+```
+  
+### Dependencies: 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* XState - [https://xstate.js.org/docs/](https://xstate.js.org/docs/)
+  
+## Documentation :book:
+ 
 
-### `npm run eject`
+### File Structure
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Here is the basic core folder structure of the app, omitting all CSS and styling related classes (generally, all .CSS files are named exactly the same as the component that is referencing it, and are placed in the same folder).
+```
+components/
+	Face.js
+	TemperatureGauges.js
+	Debug/
+		CurrentTempControl.js
+	RadialSlider/
+		RadialSlider.js
+		RadSliderThumb.js
+		RadSliderTrack.js
+		RadSliderInteractionLayer.js
+containers/
+	TemperatureRadialSlider.js
+data/
+	ModeMachine.js
+	Thermostat.js
+images/
+```  
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+React Components are split into *components* and *containers*, which are components that have to do more with UI logic, while the latter is more concerned with presentation logic and also maintains most of the states in which to progagate to the rest of the DOM tree as props. This architecture of containers and components allow for easy extensibility down the line as complex UI components can just be grouped and contained entirely within containers. This also potentially allows for a narrower API interface for parent components to pass props or states down to, making it easy to work with. 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### Face and TemperatureGauges
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### Debug
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### RadSlider
 
-### Code Splitting
+#### Data
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-### Analyzing the Bundle Size
+## License :pencil:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+ This project is licensed under the MIT License - see the [LICENSE](https://github.com/Q-gabe/temperature-radial-slider/blob/master/LICENSE) file for details.
+ 
