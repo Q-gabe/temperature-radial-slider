@@ -10,10 +10,15 @@ A fully customised Radial Slider built in ReactJS simulating a thermostat, lever
 
 ## Preview :sparkles:
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Q-gabe/temperature-radial-slider/master/preview/animatedPreview1.gif" width="300" hspace="4">
-  <img src="https://raw.githubusercontent.com/Q-gabe/temperature-radial-slider/master/preview/animatedPreview2.gif" width="300" hspace="4">
- </p>
+
+<div align="center">
+	<img src="https://raw.githubusercontent.com/Q-gabe/temperature-radial-slider/master/preview/animatedPreview1.gif" width="300" hspace="20">
+	<img src="https://raw.githubusercontent.com/Q-gabe/temperature-radial-slider/master/preview/animatedPreview2.gif" width="300" hspace="20">
+</div>
+
+<div align="center">
+	<span>Drag along the track or use your mouse wheel to scroll!</span>
+</div>
 
 <h3 align="center"><a href="https://q-gabe.me/temperature-radial-slider/">See the live interactive demo here!</a></h3>
 
@@ -69,15 +74,24 @@ images/
 
 React Components are split into *components* and *containers*, which are components that have to do more with UI logic, while the latter is more concerned with presentation logic and also maintains most of the states in which to progagate to the rest of the DOM tree as props. This architecture of containers and components allow for easy extensibility down the line as complex UI components can just be grouped and contained entirely within containers. This also potentially allows for a narrower API interface for parent components to pass props or states down to, making it easy to work with. 
 
+#### TemperatureRadialSlider
+This container acts as the main parent for the overall temperature radial slider component and maintains the states for the temperatures as well as the functions that are passed as callbacks to all the child components. An XState-implemented state machine is also utilised within this component to track the mode of the thermostat.
+
 #### Face and TemperatureGauges
 
+The Face component is responsible for the color changes of the thermostat face by reading props passed to it from TemperatureRadialSlider. Similarly, TemperatureGauges are in charge of displaying the value of the current and set temperatures to the UI.
 
 #### Debug
 
+The CurrentTempControl component is also a child component of TemperatureRadialSlider but is intended for debugging purposes, as we require a way to manipulate the current temperature to check it correctness of the radial slider. Currently, the it maintains a callback to set the relevant temperature in TemperatureRadialSlider.
+
 #### RadSlider
+
+The components in the RadSlider/ are meant to (1) display the radial slider track but also (2) handle the UI logic when it comes to interaction with the slider thumb and face itself, as it is rendered at the highest z-index div. RadialSlider is the parent class here to arrange the RadSliderThumb, RadSliderTrack and RadSliderInteractionLayer.
 
 #### Data
 
+ModeMachine contains a state machine defined using XState to manage the thermostat mode in TemperatureRadialSlider. The Thermostat is also modelled here with all the (assignment) variables for thresholds initialised here. TemperatureRadialSlider uses this Thermostat instance to check if a threshold has been reached so that the thermostat mode can be updated appropriately.
 
 ## License :pencil:
 
