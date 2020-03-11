@@ -22,6 +22,7 @@ export class RadSliderInteractionLayer extends Component {
     // Handles the onScroll event on the interaction layer and determines the scroll direction
     // and dispatching a CustomEvent representing the direction scrolled.
     scrollHappened(e){
+        e.preventDefault();
         let element = document.getElementsByClassName("RadSliderInteractionLayer")[0]
         let scrollUpEvent = new CustomEvent("scrollUp"),
         scrollDownEvent = new CustomEvent("scrollDown");
