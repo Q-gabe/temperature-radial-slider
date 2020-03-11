@@ -21,23 +21,15 @@ export class RadSliderTrack extends Component {
     getTrack() {
         let buffer = []
 
-        // Construct the left half of the radial track (30 points on one side + middle spoke)
-        for (let i = 0; i <= 30; i++) {
+        // Construct the radial track starting from the last spoke at -150 deg, to the 61st at 150 deg.
+        for (let i = 0; i <= 60; i++) {
             let xoffset = this.getX(i);
             let yoffset = this.getY(i);
             let rotationoffset = this.getAngle(i);
             buffer.push(<Spoke className="Spoke" key={i} id={i} style={{
-                transform: `translate(${xoffset}px, ${yoffset}px) rotate(${rotationoffset}rad)`                
+                transform: `translate(${xoffset}px, ${yoffset}px) rotate(${rotationoffset}deg)`                
             }}/>)
-        }
-        // Construct the right half of the radial track (30 points on one side excluding middle spoke)
-        for (let i = -1; i >= -30; i--) {
-            let xoffset = this.getX(i);
-            let yoffset = this.getY(i);
-            let rotationoffset = this.getAngle(i);
-            buffer.push(<Spoke className="Spoke" key={i} id={i} style={{
-                transform: `translate(${xoffset}px, ${yoffset}px) rotate(${rotationoffset}rad)`                
-            }}/>)
+            console.log(rotationoffset);
         }
         return buffer;
     }
@@ -46,22 +38,20 @@ export class RadSliderTrack extends Component {
     * Convenience functions for determining the XOffset, YOffset and Rotational offset of each spoke 
     * during generation.
     */
-
+    // Gets the X offset of a spoke to place it in a circle given its index
     getX(i){
-        const rad = 195
-        return -rad * Math.sin(this.getAngle(i));
+        return 195 * Math.sin(this.getAngle(i)*(Math.PI/180)) - 1; // 1px X offset
     }
-
+    // Gets the Y offset of a spoke given its index
     getY(i){
-        const rad = 195
-        return rad * Math.cos(this.getAngle(i)) - 19; // Slight y offset
+        return 195 - (195 * Math.cos(this.getAngle(i)*(Math.PI/180))) + 42; // 42px y offset
     }
 
+    // Gets the angle in deg of a spoke to place it in a circle given its index
     getAngle(i){
-        const rotationDeg = 5
-        let angle = 150 * Math.PI/180 + (i*rotationDeg)*(Math.PI/180)
-        if (angle >= 2*Math.PI) angle -= 2 * Math.PI;
-        return -angle;
+        const rotationDeg = 5,
+        base = -150;
+        return i*rotationDeg + base;
     }
     
     render() {

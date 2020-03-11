@@ -13,7 +13,5 @@
 
 .Spokes {
     position: absolute;
-    top: 50.5%;
     left: 50%;
-    transform: rotate(-30deg);
 }
