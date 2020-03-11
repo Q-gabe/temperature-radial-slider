@@ -1,7 +1,7 @@
 <h1 align="center"> temperature-radial-slider</h1>
 <p align="center">
 	<a href = "https://reactjs.org"><img src="https://img.shields.io/badge/Made with-React-23425C?logo=react"></a>
-	<a href = ""><img src="https://img.shields.io/badge/Powered by-Caffeine-blue?logo=Buy-Me-A-Coffee"></a>
+	<a href = "#"><img src="https://img.shields.io/badge/Powered by-Caffeine-blue?logo=Buy-Me-A-Coffee"></a>
 	<a href = "https://github.com/Q-gabe/temperature-radial-slider/blob/master/LICENSE"><img src="https://img.shields.io/badge/License-MIT-informational"></a>
 </p>
 
@@ -10,14 +10,13 @@ A fully customised Radial Slider built in ReactJS simulating a thermostat, lever
 
 ## Preview :sparkles:
 
-
 <div align="center">
 	<img src="https://raw.githubusercontent.com/Q-gabe/temperature-radial-slider/master/preview/animatedPreview1.gif" width="300" hspace="20">
 	<img src="https://raw.githubusercontent.com/Q-gabe/temperature-radial-slider/master/preview/animatedPreview2.gif" width="300" hspace="20">
 </div>
 
 <div align="center">
-	<span>Drag along the track or use your mouse wheel to scroll!</span>
+	<span>**Drag along the track or use your mouse wheel to scroll!**</span>
 </div>
 
 <h3 align="center"><a href="https://q-gabe.me/temperature-radial-slider/">See the live interactive demo here!</a></h3>
@@ -72,7 +71,7 @@ data/
 images/
 ```  
 
-React Components are split into *components* and *containers*, which are components that have to do more with UI logic, while the latter is more concerned with presentation logic and also maintains most of the states in which to progagate to the rest of the DOM tree as props. This architecture of containers and components allow for easy extensibility down the line as complex UI components can just be grouped and contained entirely within containers. This also potentially allows for a narrower API interface for parent components to pass props or states down to, making it easy to work with. 
+React Components are split into *components* and *containers*, which are components that have to do more with UI logic, while the latter is more concerned with presentation logic and also maintains most of the states in which to propagate to the rest of the DOM tree as props. This architecture of containers and components allow for easy extensibility down the line as complex UI components can just be grouped and contained entirely within containers. This also potentially allows for a narrower API interface for parent components to pass props or states down to, making it easy to work with. 
 
 #### TemperatureRadialSlider
 This container acts as the main parent for the overall temperature radial slider component and maintains the states for the temperatures as well as the functions that are passed as callbacks to all the child components. An XState-implemented state machine is also utilised within this component to track the mode of the thermostat.
