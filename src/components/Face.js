@@ -13,7 +13,7 @@ export class Face extends Component {
     constructor(props) {
         super(props);
 
-        this.getColorOpacity = this.getColorOpacity.bind(this.checkTemp);
+        this.getColorOpacity = this.getColorOpacity.bind(this);
     }
 
     // From the given set and current temperature, the delta is calculated to
