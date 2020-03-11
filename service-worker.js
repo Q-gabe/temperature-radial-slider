@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/temperature-radial-slider/precache-manifest.93d133fd7dd7fe926ab0eb904f6af43e.js"
+  "/temperature-radial-slider/precache-manifest.8984cb6490d452225d5f8ac9981c0186.js"
 );
 
 self.addEventListener('message', (event) => {
